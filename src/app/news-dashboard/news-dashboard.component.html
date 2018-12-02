@@ -1,0 +1,19 @@
+<div>
+  <mat-toolbar>
+    <div style="margin:0 auto;">
+      <!-- <span>My Application</span> -->
+      <mat-slide-toggle class="example-margin" (toggleChange)="toggle($event)" [checked]="checked" [color]="color">
+        get news
+      </mat-slide-toggle>
+    </div>
+  </mat-toolbar> 
+  <div *ngFor="let obj of news" style="display:flex;padding: 15px;">
+    <div>
+      <img style="height:80px;width: 80px;" [src]="obj.urlToImage">
+    </div>
+    <div style="padding:10px;">
+      <h4 style="margin-bottom:0;margin-top:10px;">{{obj.title}}</h4>
+      <p style="margin-top:5px;">{{obj.description}}</p>
+    </div>
+  </div>
+</div>
