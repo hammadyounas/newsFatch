@@ -51,8 +51,8 @@ export class NewsDashboardComponent implements OnInit {
                 this.db.collection<any>("articles").doc(`${art.id}`).delete();
               })
             })
-            let shirtsCollection  = this.db.collection('tshirts');
-            shirtsCollection.add({ name: 'item', price: 20 });
+            // let shirtsCollection  = this.db.collection('tshirts');
+            // shirtsCollection.add({ name: 'item', price: 20 });
           //  let ref =  this.db.collection<any>("articles")
             this.news.forEach(doc => {
               // console.log("doc in write =>",doc)
